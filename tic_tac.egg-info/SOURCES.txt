@@ -1,0 +1,8 @@
+MANIFEST.in
+tic_tac/__init__.py
+tic_tac/tic_tac.py
+tic_tac.egg-info/PKG-INFO
+tic_tac.egg-info/SOURCES.txt
+tic_tac.egg-info/dependency_links.txt
+tic_tac.egg-info/requires.txt
+tic_tac.egg-info/top_level.txt

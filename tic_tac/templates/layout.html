@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+  <html lang="pl">
+    <head>
+      <title>Tic Tac Toe Multiboards Game</title>
+      <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head> 
+    <body>
+      <div class="container">
+        <div class="jumbotron">
+          {% for message in get_flashed_messages() %}
+            <div class=flash>{{ message }}</div>
+          {% endfor %}
+          {% block body %}{% endblock %}
+        </div>
+      </div>
+    </body>
+  </html>

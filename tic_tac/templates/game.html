@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+	{% block body %}
+  	<h1 class="text-center player">Player: {{ current_player.symbol }}</h1>
+    <div id="table">
+  	<table  class="text-center mx-aut">
+			{% for x in [0, 1, 2] %}
+        <tr>
+			    {% for t in [1,2,3,4,5,6,7,8,10,11,12,13,14] %}
+		        <td bgcolor="#434d60">
+		        	<div class="board1"></div>
+						</td>
+          {% endfor %}
+				</tr>
+        {% for y in [0, 1, 2] %}
+          <tr>
+              {% for z in [0, 1, 2] %}
+                <td bgcolor="#434d60"> 
+			        	  <div></div>
+                </td>		
+			        	{% for a in [0, 1, 2] %}
+				          {% if board.is_square_clickable({'x': x, 'y': z, 'z': y, 'a': a}) %}
+				        		<td>
+				        			<a class="board3" href="/move/{{ x }}/{{ z }}/{{ y }}/{{ a }}">
+										    {{ board.squares[x][z][y][a] }}</a>
+								    </td>
+				          {% else %}
+				            <td>
+				              <div class="board4">{{ board.squares[x][z][y][a] }}</div>
+								    </td>                                       
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+			        <td bgcolor="#434d60"> 
+			        	<div class="board5"></div>
+			        </td>		
+		      </tr>       			        				        				              
+		    {% endfor %}								
+		  {% endfor %}
+		  <tr>
+        {% for t in [1,2,3,4,5,6,7,8,9,10,11,12,13,14] %}
+		      <td bgcolor="#434d60">
+		        <div class="board6"></div>
+					</td>
+				{% endfor %}
+			</tr>
+    </table>
+    </div>    
+  {% endblock %}

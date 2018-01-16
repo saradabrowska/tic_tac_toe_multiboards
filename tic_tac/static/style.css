@@ -1,0 +1,64 @@
+body {
+  background-color: #434d60;
+}
+
+.jumbotron {
+  height:100vh;
+  margin-bottom: -500px;
+  background-color: #f4f1ef;
+}
+
+.player {
+  margin-top: -5%;
+  color: #d12542;
+}
+
+#table {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  align-self: center;
+}
+
+.board {
+  width: 100%;
+  height: 13px;
+  margin-right: -10px;
+}
+
+.board2 {
+  display: block; 
+  width: 15px; 
+  height: 80px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.board3 {
+  background-color: #908ea0; 
+  display: block;  
+  width: 60px; 
+  height: 60px;
+  margin: 2%;
+  border-radius:10px;
+  font-weight: bold;
+  color: #e55416; 
+}
+.board3:hover {
+  background-color: #ffeba5;
+}
+
+.board4 {
+  background-color: #e4e3ed; 
+  display: block; 
+  width: 60px; 
+  height: 60px;
+  padding-top: 3%;
+  font-size: 250%;
+  margin: 2%;
+  border-radius:10px;
+  font-weight: bold;
+  color: #d12542;
+}
